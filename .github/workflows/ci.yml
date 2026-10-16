@@ -30,7 +30,7 @@ jobs:
         run: ./mvnw -B verify
       - name: Relatórios de teste
         if: failure()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: backend-test-reports
           path: |
@@ -140,7 +140,7 @@ jobs:
       # Sempre: o relatório traz as capturas do UI-05 (Chromium, Firefox e WebKit, claro e escuro).
       - name: Relatório do Playwright e logs
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: e2e-report
           path: |
